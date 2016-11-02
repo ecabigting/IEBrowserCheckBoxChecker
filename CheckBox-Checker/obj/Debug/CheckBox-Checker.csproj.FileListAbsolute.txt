@@ -1,0 +1,9 @@
+D:\GitHub\IEBrowserCheckBoxChecker\CheckBox-Checker\bin\Debug\CheckBox-Checker.exe.config
+D:\GitHub\IEBrowserCheckBoxChecker\CheckBox-Checker\bin\Debug\CheckBox-Checker.exe
+D:\GitHub\IEBrowserCheckBoxChecker\CheckBox-Checker\bin\Debug\CheckBox-Checker.pdb
+D:\GitHub\IEBrowserCheckBoxChecker\CheckBox-Checker\obj\Debug\CheckBox-Checker.csprojResolveAssemblyReference.cache
+D:\GitHub\IEBrowserCheckBoxChecker\CheckBox-Checker\obj\Debug\CheckBox_Checker.frmMain.resources
+D:\GitHub\IEBrowserCheckBoxChecker\CheckBox-Checker\obj\Debug\CheckBox_Checker.Properties.Resources.resources
+D:\GitHub\IEBrowserCheckBoxChecker\CheckBox-Checker\obj\Debug\CheckBox-Checker.csproj.GenerateResource.Cache
+D:\GitHub\IEBrowserCheckBoxChecker\CheckBox-Checker\obj\Debug\CheckBox-Checker.exe
+D:\GitHub\IEBrowserCheckBoxChecker\CheckBox-Checker\obj\Debug\CheckBox-Checker.pdb

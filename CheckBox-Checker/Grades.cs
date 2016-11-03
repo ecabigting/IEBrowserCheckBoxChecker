@@ -23,6 +23,7 @@ namespace CheckBox_Checker
             for(int x=1;x<=12;x++)
             {
                 gList.Add(new Grades(x.ToString(),x.ToString()));
+                if (x == 9 || x == 10 || x == 11 || x == 12) { gList.Add(new Grades(x.ToString() + "iG", x.ToString() + "iG")); }
             }
             return gList;
         }

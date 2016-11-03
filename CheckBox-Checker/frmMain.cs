@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Windows.Forms;
+using System.Configuration;
 using System.Text;
 using System.Collections.Generic;
 
@@ -8,6 +9,7 @@ namespace CheckBox_Checker
 {
     public partial class frmMain : Form
     {
+        public string initDir;
         public frmMain()
         {
             InitializeComponent();
@@ -15,7 +17,38 @@ namespace CheckBox_Checker
 
         private void frmMain_Load(object sender, EventArgs e)
         {
+            initDir = readIniDir();
             populateTheCBoxes();
+        }
+
+        string readIniDir()
+        {
+            var appConf = ConfigurationManager.AppSettings;
+            string iniDir = appConf["iniDir"].ToString();
+            return iniDir;
+        }
+
+        void updateIniDir(string value)
+        {
+            try
+            {
+                var configFile = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+                var settings = configFile.AppSettings.Settings;
+                if (settings["iniDir"] == null)
+                {
+                    settings.Add("iniDir", value);
+                }
+                else
+                {
+                    settings["iniDir"].Value = value;
+                }
+                configFile.Save(ConfigurationSaveMode.Modified);
+                ConfigurationManager.RefreshSection(configFile.AppSettings.SectionInformation.Name);
+            }
+            catch (ConfigurationErrorsException)
+            {
+                Console.WriteLine("Error writing app settings");
+            }
         }
 
         void populateTheCBoxes()
@@ -32,7 +65,7 @@ namespace CheckBox_Checker
         {
             OpenFileDialog newOpenFile = new OpenFileDialog();
 
-            newOpenFile.InitialDirectory = "c:\\";
+            newOpenFile.InitialDirectory = initDir;
             newOpenFile.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
             newOpenFile.FilterIndex = 2;
             newOpenFile.RestoreDirectory = true;
@@ -42,6 +75,7 @@ namespace CheckBox_Checker
                 try
                 {
                     txtDirectory.Text = newOpenFile.FileName;
+                    updateIniDir(txtDirectory.Text);
                 }
                 catch (Exception ex)
                 {

@@ -46,7 +46,8 @@
             this.mainBrowserControl.Name = "mainBrowserControl";
             this.mainBrowserControl.Size = new System.Drawing.Size(1089, 490);
             this.mainBrowserControl.TabIndex = 0;
-            this.mainBrowserControl.Url = new System.Uri("http://adsict.ethdigitalcampus.com/DCWeb/", System.UriKind.Absolute);
+            this.mainBrowserControl.Url = new System.Uri("", System.UriKind.Relative);
+            this.mainBrowserControl.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.mainBrowserControl_DocumentCompleted);
             // 
             // btnOpenFile
             // 
@@ -89,6 +90,7 @@
             this.cmbSelectGrade.Name = "cmbSelectGrade";
             this.cmbSelectGrade.Size = new System.Drawing.Size(50, 21);
             this.cmbSelectGrade.TabIndex = 4;
+            this.cmbSelectGrade.UseWaitCursor = true;
             // 
             // label1
             // 
@@ -98,6 +100,7 @@
             this.label1.Size = new System.Drawing.Size(39, 13);
             this.label1.TabIndex = 5;
             this.label1.Text = "Grade:";
+            this.label1.UseWaitCursor = true;
             // 
             // label2
             // 
@@ -107,6 +110,7 @@
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 6;
             this.label2.Text = "Class:";
+            this.label2.UseWaitCursor = true;
             // 
             // cmbClass
             // 
@@ -116,6 +120,7 @@
             this.cmbClass.Name = "cmbClass";
             this.cmbClass.Size = new System.Drawing.Size(50, 21);
             this.cmbClass.TabIndex = 7;
+            this.cmbClass.UseWaitCursor = true;
             this.cmbClass.SelectedIndexChanged += new System.EventHandler(this.cmbClass_SelectedIndexChanged);
             // 
             // frmMain

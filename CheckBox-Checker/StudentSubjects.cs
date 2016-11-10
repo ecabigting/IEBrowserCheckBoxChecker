@@ -46,7 +46,7 @@ namespace CheckBox_Checker
             StudentSubjects iniThisBitch = new StudentSubjects();
             iniThisBitch.studID = fuckingCodes[0].ToString().Trim().Split()[0];
             iniThisBitch.studentName = fuckingCodes[1].ToString().Trim();
-            switch (fuckingCodes[2].ToString().Trim())
+            switch (fuckingCodes[2].ToString().Trim().ToUpper())
             {
                 case "SP":
                     iniThisBitch.islamicEdNonArab = "1";
@@ -61,7 +61,7 @@ namespace CheckBox_Checker
                     iniThisBitch.islamicEdNonArab = null;
                     break;
             }
-            switch (fuckingCodes[3].ToString().Trim())
+            switch (fuckingCodes[3].ToString().Trim().ToUpper())
             {
                 case "SP":
                     iniThisBitch.arabLanguageNonArab = "1";
@@ -76,7 +76,7 @@ namespace CheckBox_Checker
                     iniThisBitch.arabLanguageNonArab = null;
                     break;
             }
-            switch (fuckingCodes[4].ToString().Trim())
+            switch (fuckingCodes[4].ToString().Trim().ToUpper())
             {
                 case "SP":
                     iniThisBitch.socialStudUAENonArab = "1";
@@ -107,7 +107,7 @@ namespace CheckBox_Checker
         {
             this.studID = fuckingCodes[0].ToString().Trim();
             this.studentName = fuckingCodes[1].ToString().Trim();
-            switch (fuckingCodes[2].ToString().Trim())
+            switch (fuckingCodes[2].ToString().Trim().ToUpper())
             {
                 case "SP":
                     this.islamicEdNonArab = "1";
@@ -122,7 +122,7 @@ namespace CheckBox_Checker
                     this.islamicEdNonArab = null;
                     break;
             }
-            switch (fuckingCodes[3].ToString().Trim())
+            switch (fuckingCodes[3].ToString().Trim().ToUpper())
             {
                 case "SP":
                     this.arabLanguageNonArab = "1";
@@ -137,7 +137,7 @@ namespace CheckBox_Checker
                     this.arabLanguageNonArab = null;
                     break;
             }
-            switch (fuckingCodes[4].ToString().Trim())
+            switch (fuckingCodes[4].ToString().Trim().ToUpper())
             {
                 case "SP":
                     this.socialStudUAENonArab = "1";
@@ -177,7 +177,7 @@ namespace CheckBox_Checker
             //1 or not null is true, 0 is  false
             this.studID = fuckingCodes[0].ToString().Trim();
             this.studentName = fuckingCodes[1].ToString().Trim();
-            switch (fuckingCodes[2].ToString().Trim())
+            switch (fuckingCodes[2].ToString().Trim().ToUpper())
             {
                 case "SP":
                     this.islamicEdNonArab = "1";
@@ -192,7 +192,7 @@ namespace CheckBox_Checker
                     this.islamicEdNonArab = null;
                     break;
             }
-            switch (fuckingCodes[3].ToString().Trim())
+            switch (fuckingCodes[3].ToString().Trim().ToUpper())
             {
                 case "SP":
                     this.arabLanguageNonArab = "1";
@@ -207,7 +207,7 @@ namespace CheckBox_Checker
                     this.arabLanguageNonArab = null;
                     break;
             }
-            switch (fuckingCodes[4].ToString().Trim())
+            switch (fuckingCodes[4].ToString().Trim().ToUpper())
             {
                 case "SP":
                     this.socialStudUAENonArab = "1";
@@ -241,7 +241,7 @@ namespace CheckBox_Checker
             //1 or not null is true, null is  false you stupid moron
             this.studID = fuckingCodes[0].ToString().Trim();
             this.studentName = fuckingCodes[1].ToString().Trim();
-            switch (fuckingCodes[2].ToString().Trim())
+            switch (fuckingCodes[2].ToString().Trim().ToUpper())
             {
                 case "ISL":
                     this.islamicEdArab = "1";
@@ -256,7 +256,7 @@ namespace CheckBox_Checker
                     this.islamicEdNonArab = null;
                     break;
             }
-            switch (fuckingCodes[3].ToString().Trim())
+            switch (fuckingCodes[3].ToString().Trim().ToUpper())
             {
                 case "AFL":
                     this.arabLanguageArab = "1";
@@ -271,7 +271,7 @@ namespace CheckBox_Checker
                     this.arabLanguageNonArab = null;
                     break;
             }
-            switch (fuckingCodes[4].ToString().Trim())
+            switch (fuckingCodes[4].ToString().Trim().ToUpper())
             {
                 case "SP":
                     this.socialStudUAENonArab = "1";
@@ -332,7 +332,7 @@ namespace CheckBox_Checker
             //1 or not null is true, null is  false you stupid moron
             this.studID = fuckingCodes[0].ToString().Trim().Split()[0];
             this.studentName = fuckingCodes[1].ToString().Trim();
-            switch (fuckingCodes[2].ToString().Trim())
+            switch (fuckingCodes[2].ToString().Trim().ToUpper())
             {
                 case "ISL":
                     this.islamicEdArab = "1";
@@ -347,7 +347,7 @@ namespace CheckBox_Checker
                     this.islamicEdNonArab = null;
                     break;
             }
-            switch (fuckingCodes[3].ToString().Trim())
+            switch (fuckingCodes[3].ToString().Trim().ToUpper())
             {
                 case "AFL":
                     this.arabLanguageArab = "1";
@@ -400,7 +400,7 @@ namespace CheckBox_Checker
             //1 or not null is true, null is  false you stupid moron
             this.studID = fuckingCodes[0].ToString().Trim().Split()[0];
             this.studentName = fuckingCodes[1].ToString().Trim();
-            switch (fuckingCodes[2].ToString().Trim())
+            switch (fuckingCodes[2].ToString().Trim().ToUpper())
             {
                 case "ISL":
                     this.islamicEdArab = "1";
@@ -415,7 +415,7 @@ namespace CheckBox_Checker
                     this.islamicEdNonArab = null;
                     break;
             }
-            switch (fuckingCodes[3].ToString().Trim())
+            switch (fuckingCodes[3].ToString().Trim().ToUpper())
             {
                 case "AFL":
                     this.arabLanguageArab = "1";
@@ -485,7 +485,7 @@ namespace CheckBox_Checker
             //1 or not null is true, null is  false you stupid moron
             this.studID = fuckingCodes[0].ToString().Trim().Split()[0];
             this.studentName = fuckingCodes[1].ToString().Trim();
-            switch (fuckingCodes[2].ToString().Trim())
+            switch (fuckingCodes[2].ToString().Trim().ToUpper())
             {
                 case "ISL":
                     this.islamicEdArab = "1";
@@ -500,7 +500,7 @@ namespace CheckBox_Checker
                     this.islamicEdNonArab = null;
                     break;
             }
-            switch (fuckingCodes[3].ToString().Trim())
+            switch (fuckingCodes[3].ToString().Trim().ToUpper())
             {
                 case "AFL":
                     this.arabLanguageArab = "1";
@@ -554,6 +554,8 @@ namespace CheckBox_Checker
             { this.informationT = null; }
             else
             { this.informationT = "1"; }
+
+            this.physicalEd = "1";
             return this;
         }
     }

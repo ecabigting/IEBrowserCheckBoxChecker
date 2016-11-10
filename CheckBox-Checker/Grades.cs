@@ -31,9 +31,14 @@ namespace CheckBox_Checker
         public List<Grades> divisionList()
         {
             List<Grades> divisionList = new List<Grades>();
-            for(int x = 1; x <= 5; x++) {
-                if(x <= 2) { divisionList.Add(new Grades("f" + x.ToString(),"f" + x.ToString())); }
-                else { divisionList.Add(new Grades("m" + (6-x).ToString(), "m" + (6-x).ToString())); }
+            for (int x = 1; x <= 5; x++) {
+                if (x <= 2) { divisionList.Add(new Grades("f" + x.ToString(), "f" + x.ToString())); }
+                else { divisionList.Add(new Grades("m" + (6 - x).ToString(), "m" + (6 - x).ToString())); }
+            }
+            char[] alphbee = { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I' };
+            for(int y = 0; y <= alphbee.Length; y++)
+            {
+                divisionList.Add(new Grades(alphbee[y].ToString(),alphbee[y].ToString()));
             }
             return divisionList;
         }

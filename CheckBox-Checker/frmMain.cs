@@ -10,47 +10,24 @@ namespace CheckBox_Checker
     public partial class frmMain : Form
     {
         public string initDir;
+        public bool isLogin = false;
         public frmMain()
         {
             InitializeComponent();
+            autoLoginMeIn();
+            
+        }
+
+        public void autoLoginMeIn()
+        {
+            mainBrowserControl.Navigate(new Uri("http://adsict.ethdigitalcampus.com/DCWeb/"));
         }
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            initDir = readIniDir();
             populateTheCBoxes();
         }
-
-        string readIniDir()
-        {
-            var appConf = ConfigurationManager.AppSettings;
-            string iniDir = appConf["iniDir"].ToString();
-            return iniDir;
-        }
-
-        void updateIniDir(string value)
-        {
-            try
-            {
-                var configFile = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-                var settings = configFile.AppSettings.Settings;
-                if (settings["iniDir"] == null)
-                {
-                    settings.Add("iniDir", value);
-                }
-                else
-                {
-                    settings["iniDir"].Value = value;
-                }
-                configFile.Save(ConfigurationSaveMode.Modified);
-                ConfigurationManager.RefreshSection(configFile.AppSettings.SectionInformation.Name);
-            }
-            catch (ConfigurationErrorsException)
-            {
-                Console.WriteLine("Error writing app settings");
-            }
-        }
-
+        
         void populateTheCBoxes()
         {
             Grades cmbGradeList = new Grades();
@@ -75,7 +52,6 @@ namespace CheckBox_Checker
                 try
                 {
                     txtDirectory.Text = newOpenFile.FileName;
-                    updateIniDir(txtDirectory.Text);
                 }
                 catch (Exception ex)
                 {
@@ -591,6 +567,12 @@ namespace CheckBox_Checker
 
         private void cmbClass_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void mainBrowserControl_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+            MessageBox.Show("test");
 
         }
     }
